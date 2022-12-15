@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from mailling.views import MaillingAPIView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/mailling', MaillingAPIView.as_view())
 ]
